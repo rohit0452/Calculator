@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculator</title>
+    <style>
+      #container {
+        background-color: cornsilk;
+        padding: 10px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+      body {
+        background-color: tomato;
+      }
+      h1 {
+        text-align: center;
+        color: white;
+        background-color: yellowgreen;
+      }
+      input {
+        padding: 5px;
+        margin-bottom: 10px;
+        width: 1;
+      }
+      .btn {
+        padding: 15px;
+        margin: 2px;
+        cursor: pointer;
+      }
+      .btnac {
+        padding: 14px;
+        width: 80px;
+
+        margin-bottom: 5px;
+      }
+      #answerpart {
+        font-size: large;
+        margin-top: 5px;
+      }
+      @media only screen and(min-width:300px );
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="questionpart">
+        <h1>Calculater</h1>
+        
+
+        <input id="first" type="text" placeholder="First Number" />
+        <br />
+        <input id="second" type="text" placeholder="Second Number" />
+        <br />
+        <a href="index.html"><button class="btnac">AC</button></a>
+        <button class="btn " onclick="Modulas()">%</button>
+        <button class="btn" onclick="sqrt()">^</button>
+        <br />
+        <button class="btn" onclick="Addition()">+</button>
+        <button class="btn" onclick="Substraction()">-</button>
+        <button class="btn" onclick="Multiplication()">*</button>
+        <button class="btn" onclick="Division()">/</button>
+      </div>
+      <div id="answerpart">
+        <p id="answer">The answer is :</p>
+      </div>
+    </div>
+    <script>
+      var a = document.getElementById("first");
+      var b = document.getElementById("second");
+      var result = document.getElementById("answer");
+      function Addition() {
+        n1 = parseInt(a.value);
+        n2 = parseInt(b.value);
+        result.innerHTML = "The answer is :" + (n1 + n2);
+      }
+      function Substraction() {
+        n1 = parseInt(a.value);
+        n2 = parseInt(b.value);
+        result.innerHTML = "The answer is :" + (n1 - n2);
+      }
+      function Multiplication() {
+        n1 = parseInt(a.value);
+        n2 = parseInt(b.value);
+        result.innerHTML = "The answer is :" + n1 * n2;
+      }
+      function Division() {
+        n1 = parseInt(a.value);
+        n2 = parseInt(b.value);
+        result.innerHTML = "The answer is :" + n1 / n2;
+      }
+      function Modulas() {
+        n1 = parseInt(a.value);
+        n2 = parseInt(b.value);
+        result.innerHTML = "The answer is :" + (n1 % n2);
+      }
+      function sqrt() {
+        n1 = parseInt(a.value);
+        n2 = parseInt(b.value);
+        result.innerHTML = "The answer is :" + n1 ** n2;
+      }
+    </script>
+  </body>
+</html>
